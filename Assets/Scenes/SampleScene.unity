@@ -629,7 +629,6 @@ GameObject:
   - component: {fileID: 106671176}
   - component: {fileID: 106671175}
   - component: {fileID: 106671174}
-  - component: {fileID: 106671173}
   m_Layer: 0
   m_Name: ProcessCamQuad
   m_TagString: Untagged
@@ -637,18 +636,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &106671173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 106671172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69a045326016ca54fa503cb6bb1b7e7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &106671174
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2133,6 +2120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bcee59d4f8146e478261477e69792f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  liveQuad: {fileID: 1991547730}
   resultQuad: {fileID: 106671172}
 --- !u!4 &352543232
 Transform:
@@ -10614,7 +10602,6 @@ GameObject:
   - component: {fileID: 1991547733}
   - component: {fileID: 1991547732}
   - component: {fileID: 1991547731}
-  - component: {fileID: 1991547735}
   m_Layer: 0
   m_Name: CamQuad
   m_TagString: Untagged
@@ -10712,18 +10699,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1991547735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1991547730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69a045326016ca54fa503cb6bb1b7e7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1991630829
 GameObject:
   m_ObjectHideFlags: 0
