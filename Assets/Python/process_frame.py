@@ -10,30 +10,24 @@ async def handler(websocket):
 
     while True:
         try:
-            # 1. Receive JPEG bytes from Unity
+            # Receive JPEG bytes from Unity
             data = await websocket.recv()
             #print(f"📥 Received {len(data)} bytes")
             # with open(f"frame_{frame_count}.jpg", "wb") as f:
             #     f.write(data)
 
-            # 2. Decode to image
+            # Decode to image
             nparr = np.frombuffer(data, np.uint8)
             frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
 
+            # get results
             if frame is None:
                 print("❌ Failed to decode image")
                 continue
             results = model(frame)
             result_frame = results[0].plot()
-            # 3. Simulate YOLO: draw a box
-            # h, w = frame.shape[:2]
-            # cv2.rectangle(frame, (50, 50), (w - 50, h - 50), (0, 255, 0), 2)
 
-            # Optional: show processed image
-            # cv2.imshow("Processed", frame)
-            # cv2.waitKey(1)
-
-            # 4. Encode to JPEG and send back
+            #Encode to JPEG and send back
             success, encoded = cv2.imencode(".jpg", result_frame)
             if not success:
                 print("❌ Failed to encode image")
